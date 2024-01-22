@@ -16,8 +16,8 @@ for(let val in s){
 
 console.log("map")
 //map - key value pair
-m=new Map([["id","1"],["name","karthika"],["pn","8778838303"]]);
-
+m=new Map([["id","1"],["name","karthika"]]);
+m.set("pn","8778838303")
 for(let val of m){
     console.log(val)
 }

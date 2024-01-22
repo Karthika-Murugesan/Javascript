@@ -18,7 +18,7 @@ console.log("map")
 //map - key value pair
 m=new Map([["id","1"],["name","karthika"]]);
 m.set("pn","8778838303")
-for(let val of m){
+for(var val of m){
     console.log(val)
 }
 

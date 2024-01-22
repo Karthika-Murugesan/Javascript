@@ -72,3 +72,6 @@ for(var value of arr){
     console.log(element)
 });
 */
+array.forEach(element => {
+    
+});

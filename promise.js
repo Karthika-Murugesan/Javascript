@@ -1,25 +1,40 @@
-// Prmoise - successfull and unsuccessful
+// // Prmoise - successfull and unsuccessful
 
-const arr=['s1','s2','s3']
-const marks=[12,14,15,11]
-const rank=[3,2,1,4]
-const student={
-    "name":"kavya",
-    "marks":12,
-    "rank":3
-}
-const student2={
-    "name":"priya",
-    "marks":100,
-    "rank":1
-}
-const student3={
-    "name":"karthika",
-    "marks":99,
-    "rank":2
-}
-const studentdetails=[student,student2,student3]
-console.log(studentdetails)
-const newPrommise=new Promise(function(resolve,reject){
-    
-})
+
+
+// form validation - youtube example,catch - cannot show the content, then for showing the content
+// Error message - could not connect to teh internet..refresh after soemtime
+
+//location example
+// Promise - successful and unsuccessful
+// Form validation - YouTube example, catch - cannot show the content, then for showing the content
+// Error message - could not connect to the internet..refresh after some time
+
+// Location example
+function isLocationValid(loc) {
+    var validLocation = "namakkal";
+    return loc === validLocation;
+  }
+  
+  function location() {
+    return new Promise(function (resolve, reject) {
+      setTimeout(function () {
+        var loc = "namakkal";
+        console.log(loc);
+        if (isLocationValid(loc)) {
+          resolve("Location found");
+        } else {
+          reject("Location not found");
+        }
+      }, 2000);
+    });
+  }
+  
+  location()
+    .then(function (response) {
+      console.log(response);
+    })
+    .catch(function (errorMessage) {
+      console.log(errorMessage);
+    });
+  

@@ -1,0 +1,33 @@
+
+        <style>
+        div{
+            background-color: black;
+            width:500px;
+            height:500px;
+            margin-left: 550px;
+            margin-right: 550px;
+            
+        }
+
+        </style>
+   
+        <div id="change">
+           
+        </div>
+        
+        <button onclick="colorChange()" style="background-color: green;">Change Color</button>
+    </body>
+    <script>
+        var box=document.getElementById("change")
+        function colorChange(){
+            const hexa='0123456789ABCDEF'
+            
+            var c='#'
+            for(var i=0;i<6;i++){
+               c+=hexa[Math.floor(Math.random()*16)]
+            }
+            
+            box.style.backgroundColor=c
+          }
+    </script>
+

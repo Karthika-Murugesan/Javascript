@@ -12,12 +12,12 @@
 // }
 // kk("Hello ",mk)
 
-function database(){
+var database=()=>{
    console.log("Form submitted successfully..!!")
 }
 
-function submitForm(buttonClick,db){ // function definition
-   setTimeout(function(){
+var submitForm=(buttonClick,db)=>{ // function definition
+   setTimeout(()=>{
     console.log(buttonClick)
         db()
    },2000)

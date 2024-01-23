@@ -1,0 +1,81 @@
+<!-- document object model -->
+<!-- <p id="one">
+    hello
+</p>
+<h1 id="title">Hello World</h1>
+<script>
+    // select paragraph tag using id
+  var para=document.getElementById("one")
+  console.log(para.textContent)
+  para.textContent="bye"
+  var head=document.getElementById("title")
+  head.textContent="Bye World"
+
+</script> -->
+
+<!-- <h1 id="h1">Hello world</h1>
+<button onclick="change()">Change</button>
+<script>
+    var h1=document.getElementById("h1")
+    console.log(h1.textContent)
+    function change(){
+       h1.textContent="Bye world"
+    }
+</script> -->
+
+<!-- 
+<input id="num1">
+<input  id="num2">
+<button onclick="add()">add</button>
+<p id="result">Result:</p>
+<script>
+    var num1=document.getElementById("num1")
+    var num2=document.getElementById("num2")
+    var result=document.getElementById("result")
+    function add(){
+        var n1=Number(num1.value)
+        var n2=Number(num2.value)
+        var total=n1+n2
+        console.log(total)
+        result.textContent="Result:"+total
+        
+    }
+</script> -->
+<!-- <script>
+    var num=Math.floor(Math.random()*10 +1)
+    console.log(num)
+</script> -->
+
+<h1>Guess the Number from 1 to 10</h1>
+<input id="random">
+<button onclick="guess()">Check</button>
+<p id="result">Result:</p>
+<script>
+
+    var r=document.getElementById("random")
+    console.log(r)
+    var res=document.getElementById("result")
+
+    var randomNumber=Number(Math.floor(Math.random()*10)+1)
+    //console.log(randomNumber)
+    console.log(randomNumber)
+    score=10
+    function guess(){
+        var guessValue=r.value
+        
+        if(guessValue==randomNumber){
+             res.textContent="your guess is correct"
+             alert("YOU WON, Score is "+score)
+         }
+        if (guessValue<randomNumber){
+             score--
+             res.textContent="your guess is too low,score: " + score
+
+         }
+         if (guessValue>randomNumber) {
+            score--
+            res.textContent="your guess is too high,score: "+ score
+         }
+    }      
+    
+</script>

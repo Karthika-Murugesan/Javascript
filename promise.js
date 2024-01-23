@@ -11,13 +11,13 @@
 // Error message - could not connect to the internet..refresh after some time
 
 // Location example
-function isLocationValid(loc) {
+ var isLocationValid=(loc)=> {
     var validLocation = "namakkal";
     return loc === validLocation;
   }
   
-  function location() {
-    return new Promise(function (resolve, reject) {
+  var location=()=> {
+    return new Promise((resolve, reject)=>{
       setTimeout(function () {
         var loc = "namakkal";
         console.log(loc);
@@ -31,10 +31,10 @@ function isLocationValid(loc) {
   }
   
   location()
-    .then(function (response) {
+    .then((response)=> {
       console.log(response);
     })
-    .catch(function (errorMessage) {
+    .catch((errorMessage)=> {
       console.log(errorMessage);
     });
   
